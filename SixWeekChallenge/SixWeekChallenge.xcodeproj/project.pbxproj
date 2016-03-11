@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C39BC6781C93278100836868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC6771C93278100836868 /* AppDelegate.swift */; };
-		C39BC67A1C93278100836868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC6791C93278100836868 /* ViewController.swift */; };
 		C39BC67D1C93278100836868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39BC67B1C93278100836868 /* Main.storyboard */; };
 		C39BC6801C93278100836868 /* SixWeekChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C39BC67E1C93278100836868 /* SixWeekChallenge.xcdatamodeld */; };
 		C39BC6821C93278200836868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39BC6811C93278200836868 /* Assets.xcassets */; };
 		C39BC6851C93278200836868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39BC6831C93278200836868 /* LaunchScreen.storyboard */; };
+		C39BC68D1C9328CD00836868 /* EntityListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC68C1C9328CD00836868 /* EntityListTableViewController.swift */; };
+		C39BC68F1C93291700836868 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC68E1C93291700836868 /* Entity.swift */; };
+		C39BC6911C932A1200836868 /* EntityEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC6901C932A1200836868 /* EntityEntryViewController.swift */; };
+		C39BC6931C932F4200836868 /* EntityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC6921C932F4200836868 /* EntityController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C39BC6741C93278100836868 /* SixWeekChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixWeekChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39BC6771C93278100836868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C39BC6791C93278100836868 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C39BC67C1C93278100836868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C39BC67F1C93278100836868 /* SixWeekChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SixWeekChallenge.xcdatamodel; sourceTree = "<group>"; };
 		C39BC6811C93278200836868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C39BC6841C93278200836868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C39BC6861C93278200836868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39BC68C1C9328CD00836868 /* EntityListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityListTableViewController.swift; sourceTree = "<group>"; };
+		C39BC68E1C93291700836868 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		C39BC6901C932A1200836868 /* EntityEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityEntryViewController.swift; sourceTree = "<group>"; };
+		C39BC6921C932F4200836868 /* EntityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				C39BC6771C93278100836868 /* AppDelegate.swift */,
-				C39BC6791C93278100836868 /* ViewController.swift */,
 				C39BC67B1C93278100836868 /* Main.storyboard */,
+				C39BC6901C932A1200836868 /* EntityEntryViewController.swift */,
+				C39BC68E1C93291700836868 /* Entity.swift */,
+				C39BC68C1C9328CD00836868 /* EntityListTableViewController.swift */,
+				C39BC6921C932F4200836868 /* EntityController.swift */,
 				C39BC6811C93278200836868 /* Assets.xcassets */,
 				C39BC6831C93278200836868 /* LaunchScreen.storyboard */,
 				C39BC6861C93278200836868 /* Info.plist */,
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39BC67A1C93278100836868 /* ViewController.swift in Sources */,
+				C39BC68F1C93291700836868 /* Entity.swift in Sources */,
+				C39BC68D1C9328CD00836868 /* EntityListTableViewController.swift in Sources */,
+				C39BC6931C932F4200836868 /* EntityController.swift in Sources */,
 				C39BC6801C93278100836868 /* SixWeekChallenge.xcdatamodeld in Sources */,
+				C39BC6911C932A1200836868 /* EntityEntryViewController.swift in Sources */,
 				C39BC6781C93278100836868 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

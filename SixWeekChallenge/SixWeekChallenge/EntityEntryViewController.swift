@@ -10,17 +10,23 @@ import UIKit
 
 class EntityEntryViewController: UIViewController {
 
+    @IBOutlet weak var entityTextField: UITextField!
+    
+    var entity: Entity?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    @IBAction func addEntityButtonTapped(sender: AnyObject) {
+      
+        let entity = Entity(name: self.entityTextField.text!)
+        EntityController.sharedInstance.addEntity(entity)
+        self.entity = entity
+    }
 
     /*
     // MARK: - Navigation
