@@ -10,13 +10,17 @@ import UIKit
 
 class EntityListTableViewController: UITableViewController {
 
+    static let sharedController = EntityListTableViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-    
-    
-    
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,10 +30,7 @@ class EntityListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+    
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -50,12 +51,12 @@ class EntityListTableViewController: UITableViewController {
     
 
     
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    
+//    // Override to support conditional editing of the table view.
+//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        // Return false if you do not want the specified item to be editable.
+//        return true
+//    }
+//    
 
     /*
     // Override to support editing the table view.

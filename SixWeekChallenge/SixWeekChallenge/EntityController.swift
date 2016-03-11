@@ -19,7 +19,7 @@ class EntityController {
     init() {
         self.entities = []
         
-        
+        self.loadFromPersistentStorage()
     }
     
     func addEntity(entity: Entity) {
@@ -29,15 +29,15 @@ class EntityController {
         self.saveToPersistentStorage()
     }
     
-    func removeEntity(entity: Entity) {
-        
-        if let entityIndex = entities.indexOf(entity) {
-
-            entities.removeAtIndex(entityIndex)
-        
-        }
-        
-    }
+//    func removeEntity(entity: Entity) {
+//        
+//        if let entityIndex = entities.indexOf(entity) {
+//
+//            entities.removeAtIndex(entityIndex)
+//        
+//        }
+//        
+//    }
 
     func editEntity(entity: Entity) {
         
@@ -53,7 +53,7 @@ class EntityController {
         
         if let entitiesDictionary = entitiesDictionariesFromDefaults {
             
-            self.entities = entitiesDictionary.map({Entity(dictionary: $0)!})
+        self.entities = entitiesDictionary.map({Entity(dictionary: $0 )!})
             
         }
     

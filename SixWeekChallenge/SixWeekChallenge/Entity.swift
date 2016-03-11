@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Entity {
+class Entity: Equatable {
     
     private let nameKey = "name"
     
@@ -29,10 +29,15 @@ class Entity {
     }
     
     func dictionaryCopy() -> [String: AnyObject] {
+
         let dictionary = [
-            nameKey : self.name
+            nameKey: self.name
         ]
         
         return dictionary
     }
+}
+
+func == (lhs: Entity, rhs: Entity) -> Bool {
+    return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
 }
