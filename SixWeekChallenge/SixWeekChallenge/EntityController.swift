@@ -29,31 +29,38 @@ class EntityController {
         self.saveToPersistentStorage()
     }
     
-//    func removeEntity(entity: Entity) {
-//        
-//        if let entityIndex = entities.indexOf(entity) {
-//
-//            entities.removeAtIndex(entityIndex)
-//        
-//        }
-//        
-//    }
+    func removeEntity(entity: Entity) {
+        
+        if let entityIndex = entities.indexOf(entity) {
+
+           entities.removeAtIndex(entityIndex)
+        
+        }
+        
+    }
 
     func editEntity(entity: Entity) {
         
     }
     
-    func randomPair(itemOne: Entity, itemTwo: Entity) {
-    
+    func randomPair(var itemOne: Entity, var itemTwo: Entity) {
+        let randomIndexOne = Int(arc4random_uniform(UInt32(entities.count)))
+        itemOne = entities[randomIndexOne]
+        
+        
+        let randomIndexTwo = Int(arc4random_uniform(UInt32(entities.count)))
+        itemTwo = entities[randomIndexTwo]
+
     }
+    func generate
     
     func loadFromPersistentStorage() {
         
-        let entitiesDictionariesFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(entitiesKey) as? [String: AnyObject]
+        let entitiesDictionariesFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(entitiesKey) as? [[String: AnyObject]]
         
         if let entitiesDictionary = entitiesDictionariesFromDefaults {
             
-        self.entities = entitiesDictionary.map({Entity(dictionary: $0 )!})
+            self.entities = entitiesDictionary.map({Entity(dictionary: $0)!})
             
         }
     

@@ -14,12 +14,12 @@ class EntityListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        EntityController.sharedInstance.loadFromPersistentStorage()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        EntityController.sharedInstance.loadFromPersistentStorage()
         tableView.reloadData()
     }
 
