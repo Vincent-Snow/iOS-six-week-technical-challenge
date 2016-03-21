@@ -16,6 +16,7 @@
 		C39BC68F1C93291700836868 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC68E1C93291700836868 /* Entity.swift */; };
 		C39BC6911C932A1200836868 /* EntityEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC6901C932A1200836868 /* EntityEntryViewController.swift */; };
 		C39BC6931C932F4200836868 /* EntityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BC6921C932F4200836868 /* EntityController.swift */; };
+		C3F82D491C9F919E00623532 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F82D481C9F919E00623532 /* ItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C39BC68E1C93291700836868 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		C39BC6901C932A1200836868 /* EntityEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityEntryViewController.swift; sourceTree = "<group>"; };
 		C39BC6921C932F4200836868 /* EntityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityController.swift; sourceTree = "<group>"; };
+		C3F82D481C9F919E00623532 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				C39BC6771C93278100836868 /* AppDelegate.swift */,
 				C39BC67B1C93278100836868 /* Main.storyboard */,
+				C3F82D481C9F919E00623532 /* ItemViewController.swift */,
 				C39BC6901C932A1200836868 /* EntityEntryViewController.swift */,
 				C39BC68E1C93291700836868 /* Entity.swift */,
 				C39BC68C1C9328CD00836868 /* EntityListTableViewController.swift */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F82D491C9F919E00623532 /* ItemViewController.swift in Sources */,
 				C39BC68F1C93291700836868 /* Entity.swift in Sources */,
 				C39BC68D1C9328CD00836868 /* EntityListTableViewController.swift in Sources */,
 				C39BC6931C932F4200836868 /* EntityController.swift in Sources */,
@@ -303,6 +307,7 @@
 				C39BC68B1C93278200836868 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

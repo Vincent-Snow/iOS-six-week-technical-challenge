@@ -10,6 +10,15 @@ import UIKit
 
 class EntityListTableViewController: UITableViewController {
 
+    @IBAction func randomButtonTapped(sender: AnyObject) {
+        ItemViewController.sharedItemViewController.itemOneLabel.text = EntityController.sharedInstance.randomPair().0.name
+        ItemViewController.sharedItemViewController.itemTwoLabel.text = EntityController.sharedInstance.randomPair().1.name
+
+    //        let randomEntityIndex = EntityController.sharedInstance.generateRandom()
+    //        let entity = EntityController.sharedInstance.entities[randomEntityIndex]
+
+        
+    }
     static let sharedController = EntityListTableViewController()
     
     override func viewDidLoad() {
@@ -44,7 +53,7 @@ class EntityListTableViewController: UITableViewController {
         let entity = EntityController.sharedInstance.entities[indexPath.row]
         
         cell.textLabel?.text = entity.name
-       
+        
 
         return cell
     }
@@ -85,14 +94,17 @@ class EntityListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "randomizerSegue" {
+            let itemViewController = segue.destinationViewController as! ItemViewController
+            
+            
+        }
     }
-    */
+    
 
 }

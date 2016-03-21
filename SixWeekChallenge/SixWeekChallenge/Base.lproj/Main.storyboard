@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Entity Entry View Controller-->
+        <!--Pair Randomizer-->
         <scene sceneID="j47-yL-ktl">
             <objects>
                 <viewController id="O8F-jh-x0H" customClass="EntityEntryViewController" customModule="SixWeekChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,43 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdR-jl-NKu">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdR-jl-NKu">
                                 <rect key="frame" x="262" y="285" width="77" height="30"/>
                                 <state key="normal" title="Add Item"/>
                                 <connections>
                                     <action selector="addEntityButtonTapped:" destination="O8F-jh-x0H" eventType="touchUpInside" id="tdC-DO-YlO"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-fp-auv">
-                                <rect key="frame" x="252" y="188" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-fp-auv">
+                                <rect key="frame" x="252" y="203" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="aHy-Qa-WeY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXJ-A5-ait">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXJ-A5-ait">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Pair Randomizer" id="wgN-2X-JsN">
-                                        <barButtonItem key="rightBarButtonItem" title="View List" id="GI4-Z3-N61">
-                                            <connections>
-                                                <segue destination="Jzu-pN-LhF" kind="show" identifier="toEntityList" id="oam-jL-VNu"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jdR-jl-NKu" firstAttribute="centerY" secondItem="1xs-51-IqW" secondAttribute="centerY" id="3hC-GV-dwk"/>
+                            <constraint firstItem="iXJ-A5-ait" firstAttribute="centerX" secondItem="1xs-51-IqW" secondAttribute="centerX" id="igu-8U-T67"/>
+                            <constraint firstItem="jdR-jl-NKu" firstAttribute="top" secondItem="DSF-fp-auv" secondAttribute="bottom" constant="52" id="riN-o7-Oiz"/>
+                            <constraint firstItem="DSF-fp-auv" firstAttribute="centerX" secondItem="jdR-jl-NKu" secondAttribute="centerX" id="sq1-DZ-2EB"/>
+                            <constraint firstItem="jdR-jl-NKu" firstAttribute="centerX" secondItem="1xs-51-IqW" secondAttribute="centerX" id="y8g-cI-a9u"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nmP-2J-lGh"/>
+                    <navigationItem key="navigationItem" title="Pair Randomizer" id="wgN-2X-JsN">
+                        <barButtonItem key="rightBarButtonItem" title="View List" id="GI4-Z3-N61">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="50" maxY="0.0"/>
+                            <connections>
+                                <segue destination="Jzu-pN-LhF" kind="show" identifier="toEntityList" id="oam-jL-VNu"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="titleView" destination="iXJ-A5-ait" id="Dul-OT-7bJ"/>
+                        </connections>
+                    </navigationItem>
                     <connections>
                         <outlet property="entityTextField" destination="DSF-fp-auv" id="jYI-NJ-uMz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pb1-o7-AAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="476"/>
+            <point key="canvasLocation" x="968" y="391"/>
         </scene>
-        <!--Entity List Table View Controller-->
+        <!--Title-->
         <scene sceneID="9p8-AG-Z9L">
             <objects>
                 <tableViewController id="Jzu-pN-LhF" customClass="EntityListTableViewController" customModule="SixWeekChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,7 +84,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -85,10 +96,54 @@
                             <outlet property="delegate" destination="Jzu-pN-LhF" id="Iyt-nd-V87"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="kmS-Ym-xV0">
+                        <barButtonItem key="rightBarButtonItem" title="Random" id="MBD-A8-2vm">
+                            <connections>
+                                <segue destination="s2w-SR-Orb" kind="show" identifier="randomizerSegue" id="3D5-Ao-T18"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEI-YA-wkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1634" y="476"/>
+        </scene>
+        <!--Item View Controller-->
+        <scene sceneID="Ipm-FJ-fFb">
+            <objects>
+                <viewController id="ART-tJ-X8F" customClass="ItemViewController" customModule="SixWeekChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7jt-YG-V64"/>
+                        <viewControllerLayoutGuide type="bottom" id="QHI-vR-rUe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0bq-zg-diq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="itemTwo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-8A-u2U">
+                                <rect key="frame" x="351" y="289" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="itemOne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygc-Cx-1CY">
+                                <rect key="frame" x="178" y="289" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TFa-FU-cTC"/>
+                    <connections>
+                        <outlet property="itemOneLabel" destination="ygc-Cx-1CY" id="y1A-8m-nNh"/>
+                        <outlet property="itemTwoLabel" destination="0Of-8A-u2U" id="xKA-zs-siX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FS1-vG-8n2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3116" y="476"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gfW-dq-ucd">
@@ -106,7 +161,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1AA-zC-mQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="476"/>
+            <point key="canvasLocation" x="191" y="441"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d1H-he-U30">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s2w-SR-Orb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qdu-Lq-B28">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ART-tJ-X8F" kind="relationship" relationship="rootViewController" id="vuh-d8-yrU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tFi-ug-4gD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2304" y="476"/>
         </scene>
     </scenes>
 </document>

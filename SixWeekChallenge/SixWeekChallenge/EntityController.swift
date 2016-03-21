@@ -39,20 +39,28 @@ class EntityController {
         
     }
 
-    func editEntity(entity: Entity) {
+ 
+    func generateRandom() -> Int {
+        let randomIndex = Int(arc4random_uniform(UInt32(entities.count)))
         
+        return randomIndex
+    }
+    func declareRandom() -> (Entity, Entity) {
+        
+        let randomItemOne = entities[generateRandom()]
+        let randomItemTwo = entities[generateRandom()]
+        return (randomItemOne, randomItemTwo)
     }
     
-    func randomPair(var itemOne: Entity, var itemTwo: Entity) {
-        let randomIndexOne = Int(arc4random_uniform(UInt32(entities.count)))
-        itemOne = entities[randomIndexOne]
+    func randomPair() -> (Entity, Entity) {
         
-        
-        let randomIndexTwo = Int(arc4random_uniform(UInt32(entities.count)))
-        itemTwo = entities[randomIndexTwo]
-
+        if  declareRandom().0 != declareRandom().1 {
+            return (declareRandom().0, declareRandom().1)
+            
+        }
+        return randomPair()
     }
-    func generate
+
     
     func loadFromPersistentStorage() {
         
